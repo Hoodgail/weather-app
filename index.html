@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/weather-app/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="modulepreload" href="/weather-app/_app/immutable/start-f0c183c2.js">
-	<link rel="modulepreload" href="/weather-app/_app/immutable/chunks/index-6a061858.js">
-	</head>
-	<body>
-		<div>
-		<script type="module" data-sveltekit-hydrate="45h">
-		import { start } from "/weather-app/_app/immutable/start-f0c183c2.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-			paths: {"base":"/weather-app","assets":"/weather-app"},
-			session: {},
-			route: true,
-			spa: true,
-			trailing_slash: "never",
-			hydrate: null
-		});
-	</script></div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/stylesheet/style.css" />
+        <script defer src="./script.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>Weather Dashboard</h1>
+        </header>
+        <main>
+            <aside class="sidebar">
+                <h1>Search for a City:</h1>
+                <div class="search-wrapper">
+                    <input type="text" class="search-box" placeholder="San Diego" />
+                    <button class="search-city">Search</button>
+                    <div class="search--message"></div>
+                </div>
+                <div class="history"></div>
+            </aside>
+
+            <div class="display">
+                <div class="weather-info">
+                    <h1></h1>
+                    <div class="currentweather"></div>
+                </div>
+
+                <div class="forecast"></div>
+            </div>
+        </main>
+    </body>
 </html>
